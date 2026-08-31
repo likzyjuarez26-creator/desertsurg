@@ -1,322 +1,548 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Desert Surgical Staffing | Surgical Staffing Solutions</title>
+<title>Desert Surgical Staffing | Specialized Surgical Staffing Solutions</title>
 
 <style>
 
+:root {
+  --charcoal: #29363a;
+  --copper: #a77b58;
+  --rose-gold: #b99072;
+  --ivory: #f8f5ef;
+  --cream: #e5ddd2;
+  --white: #ffffff;
+  --text: #444d50;
+}
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f8f6f2;
-  color: #243238;
-  line-height: 1.6;
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
 }
 
 /* HEADER */
 
 header {
-  background: #243238;
-  color: white;
-  padding: 20px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid var(--cream);
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  letter-spacing: .5px;
+  color: var(--charcoal);
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 15px;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--charcoal);
 }
 
 nav a:hover {
-  color: #d5b98c;
+  color: var(--copper);
 }
 
 /* HERO */
 
 .hero {
-  background: #e9e2d6;
-  padding: 100px 7%;
-  text-align: center;
+  text-align: center;
+  padding: 105px 7% 95px;
+  background:
+    linear-gradient(
+      rgba(248,245,239,.94),
+      rgba(248,245,239,.94)
+    );
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: 48px;
-  max-width: 900px;
-  margin: auto;
-  color: #243238;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.15;
+  max-width: 850px;
+  margin: 0 auto 25px;
+  color: var(--charcoal);
 }
 
 .hero p {
-  font-size: 20px;
-  max-width: 720px;
-  margin: 20px auto 30px;
-  color: #4d5a5f;
+  max-width: 720px;
+  margin: 0 auto 35px;
+  color: var(--text);
+  font-size: 17px;
 }
 
-/* BUTTON */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
 .button {
-  display: inline-block;
-  background: #9c7954;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+  display: inline-block;
+  background: var(--copper);
+  color: var(--white);
+  border: none;
+  padding: 14px 30px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s ease;
 }
 
 .button:hover {
-  background: #806143;
+  background: var(--rose-gold);
 }
 
-/* SECTIONS */
+.button-outline {
+  background: transparent;
+  color: var(--charcoal);
+  border: 1px solid var(--charcoal);
+}
+
+.button-outline:hover {
+  background: var(--charcoal);
+  color: var(--white);
+}
+
+/* VALUES */
+
+.values {
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 25px 7%;
+}
+
+.values-grid {
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.value {
+  padding: 10px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* GENERAL SECTIONS */
 
 section {
-  padding: 75px 7%;
+  padding: 90px 7%;
+}
+
+.section-eyebrow {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 12px;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 34px;
-  margin-bottom: 40px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 38px;
+  margin: 0 0 45px;
+  color: var(--charcoal);
 }
 
 /* ABOUT */
 
-.about {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-  font-size: 18px;
+.about-content {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.founder {
+  margin-top: 30px;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: var(--charcoal);
+}
+
+.founder span {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-top: 5px;
 }
 
 /* SERVICES */
 
-.services {
-  background: white;
+.services-section {
+  background: var(--white);
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 1100px;
-  margin: auto;
+.services-grid {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
-.card {
-  background: #f8f6f2;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  border: 1px solid #e1ddd5;
+.service-card {
+  border: 1px solid var(--cream);
+  background: var(--ivory);
+  padding: 35px;
+  text-align: center;
 }
 
-.card h3 {
-  color: #9c7954;
-  margin-bottom: 12px;
-  font-size: 21px;
+.service-number {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  color: var(--copper);
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.service-card p {
+  color: var(--text);
+  font-size: 15px;
+  margin: 0;
 }
 
 /* SPECIALTIES */
 
-.specialties {
-  max-width: 950px;
-  margin: auto;
-  text-align: center;
+.specialties-content {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.specialties-content p {
+  color: var(--text);
+  margin-bottom: 30px;
 }
 
 .specialty-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .specialty {
-  background: #243238;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 30px;
+  border: 1px solid var(--cream);
+  background: var(--white);
+  padding: 11px 18px;
+  font-size: 13px;
+  color: var(--charcoal);
+}
+
+/* INQUIRY FORM */
+
+.inquiry-section {
+  background: var(--white);
+}
+
+.inquiry-wrap {
+  max-width: 650px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--cream);
+  border-radius: 4px;
+  padding: 45px 40px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(41,54,58,.06);
+}
+
+.inquiry-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.inquiry-header h3 {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  color: var(--charcoal);
+}
+
+.inquiry-header p {
+  color: #666;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.inquiry-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+}
+
+.inquiry-form .full-width {
+  grid-column: 1 / -1;
+}
+
+.inquiry-field label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 6px;
+}
+
+.inquiry-field input,
+.inquiry-field select,
+.inquiry-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid var(--cream);
+  border-radius: 3px;
+  background: var(--ivory);
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: var(--charcoal);
+}
+
+.inquiry-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.inquiry-field input:focus,
+.inquiry-field select:focus,
+.inquiry-field textarea:focus {
+  outline: none;
+  border-color: var(--copper);
+}
+
+.inquiry-submit-wrap {
+  text-align: center;
+  grid-column: 1 / -1;
+  margin-top: 5px;
+}
+
+.inquiry-submit {
+  display: inline-block;
+  background: var(--copper);
+  color: var(--white);
+  border: none;
+  padding: 14px 40px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.inquiry-submit:hover {
+  background: var(--rose-gold);
+}
+
+.inquiry-note {
+  font-size: 13px;
+  color: #888;
+  margin-top: 16px;
+  text-align: center;
+  grid-column: 1 / -1;
 }
 
 /* CONTACT */
 
-.cta {
-  background: #243238;
-  color: white;
-  text-align: center;
+.contact-section {
+  background: var(--charcoal);
+  color: var(--white);
+  text-align: center;
 }
 
-.cta h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
+.contact-section .section-eyebrow {
+  color: #d1a886;
 }
 
-.cta a {
-  color: #d5b98c;
+.contact-section .section-title {
+  color: var(--white);
+  margin-bottom: 20px;
 }
 
-/* POPUP */
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,.65);
-  overflow-y: auto;
-  padding: 30px 15px;
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #e4e4e4;
 }
 
-.modal-content {
-  background: #f8f6f2;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 35px;
-  border-radius: 12px;
-  position: relative;
-  box-shadow: 0 10px 40px rgba(0,0,0,.25);
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
 }
 
-.close {
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #555;
+.contact-item {
+  text-align: center;
 }
 
-.modal-content h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 8px;
+.contact-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8a183;
+  margin-bottom: 6px;
 }
 
-.modal-intro {
-  text-align: center;
-  color: #59666a;
-  margin-bottom: 25px;
+.contact-item a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
 }
 
-/* FORM */
-
-.form-group {
-  margin-bottom: 17px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #cfcac1;
-  border-radius: 6px;
-  background: white;
-  font-size: 16px;
-}
-
-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.submit-area {
-  text-align: center;
-  margin-top: 25px;
+.contact-item a:hover {
+  color: #d5b08f;
 }
 
 /* FOOTER */
 
 footer {
-  background: #1b272c;
-  color: white;
-  text-align: center;
-  padding: 35px 7%;
-}
-
-footer a {
-  color: #d5b98c;
-  text-decoration: none;
+  background: #202b2f;
+  color: #fff;
+  text-align: center;
+  padding: 30px 7%;
 }
 
 footer p {
-  margin: 6px 0;
+  margin: 5px 0;
+  font-size: 13px;
+  color: #d5d5d5;
+}
+
+.footer-name {
+  font-family: Georgia, serif;
+  font-size: 18px !important;
+  color: white !important;
 }
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
-  header {
-    flex-direction: column;
-    gap: 12px;
-  }
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-  nav a {
-    margin: 0 7px;
-  }
+  nav a {
+    margin: 0 8px;
+    font-size: 11px;
+  }
 
-  .hero h1 {
-    font-size: 36px;
-  }
+  .hero {
+    padding: 75px 7%;
+  }
 
-  .hero p {
-    font-size: 18px;
-  }
+  .hero h1 {
+    font-size: 38px;
+  }
 
-  .cards {
-    grid-template-columns: 1fr;
-  }
+  .hero p {
+    font-size: 16px;
+  }
 
-  .modal-content {
-    padding: 25px 20px;
-  }
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiry-form {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiry-form .full-width,
+  .inquiry-submit-wrap,
+  .inquiry-note {
+    grid-column: 1;
+  }
+
+  .inquiry-wrap {
+    padding: 35px 22px;
+  }
+
+  .contact-details {
+    flex-direction: column;
+    gap: 20px;
+  }
 
 }
 
 </style>
 </head>
 
+
 <body>
+
 
 <!-- HEADER -->
 
@@ -327,10 +553,23 @@ Desert Surgical Staffing
 </div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#specialties">
+Specialties
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
 </nav>
 
 </header>
@@ -338,54 +577,99 @@ Desert Surgical Staffing
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero">
+
+<div class="hero-eyebrow">
+Specialized Surgical Staffing Solutions
+</div>
 
 <h1>
-Reliable Surgical Staffing When You Need It Most
+Reliable surgical professionals.<br>
+Exceptional patient care.
 </h1>
 
 <p>
-Professional surgical staffing solutions designed to help healthcare
-facilities maintain coverage, efficiency, and quality patient care.
+Desert Surgical Staffing provides experienced surgical technologists
+to ambulatory surgery centers, private practices, and surgical facilities —
+with a strong focus on ophthalmology.
 </p>
 
-<button class="button" onclick="openForm()">
+<div class="hero-buttons">
+
+<a href="#inquiry" class="button">
 Request Staffing
-</button>
+</a>
+
+<a href="#services" class="button button-outline">
+Our Services
+</a>
+
+</div>
 
 </section>
+
+
+<!-- VALUES -->
+
+<div class="values">
+
+<div class="values-grid">
+
+<div class="value">
+Professional
+</div>
+
+<div class="value">
+Reliable
+</div>
+
+<div class="value">
+Arizona Rooted
+</div>
+
+<div class="value">
+Patient Focused
+</div>
+
+</div>
+
+</div>
 
 
 <!-- ABOUT -->
 
 <section id="about">
 
-<h2 class="section-title">
+<div class="section-eyebrow">
 About Desert Surgical Staffing
+</div>
+
+<h2 class="section-title">
+Staffing built around surgical teams.
 </h2>
 
-<div class="about">
+<div class="about-content">
 
 <p>
-Desert Surgical Staffing provides dependable surgical staffing solutions
-for healthcare facilities throughout Arizona. We help facilities maintain
-coverage during staffing shortages, vacations, call-outs, increased
-surgical volume, and other temporary staffing needs.
+Desert Surgical Staffing was created to provide healthcare facilities
+with dependable, skilled surgical professionals when they need support.
 </p>
-
-<br>
 
 <p>
-With specialized experience in ophthalmology and surgical services,
-Desert Surgical Staffing is committed to providing experienced,
-professional, and reliable surgical personnel.
+With an emphasis on ophthalmology and experience in outpatient surgical
+environments, we understand the importance of preparation, efficiency,
+teamwork, and patient-focused care in the operating room.
 </p>
 
-<br>
+<div class="founder">
 
-<strong>
-Founded and operated by Likzy Juarez, CST
-</strong>
+Likzy Juarez
+
+<span>
+Founder & Owner
+</span>
+
+</div>
 
 </div>
 
@@ -394,51 +678,50 @@ Founded and operated by Likzy Juarez, CST
 
 <!-- SERVICES -->
 
-<section class="services" id="services">
+<section class="services-section" id="services">
+
+<div class="section-eyebrow">
+What We Provide
+</div>
 
 <h2 class="section-title">
-Our Staffing Solutions
+Our Services
 </h2>
 
-<div class="cards">
+<div class="services-grid">
 
-<div class="card">
+<div class="service-card">
+
+<div class="service-number">
+01
+</div>
 
 <h3>
-Travel & Contract Staffing
+PRN Surgical Technologists
 </h3>
 
 <p>
-Flexible staffing support for facilities needing experienced surgical
-professionals for short-term or contract assignments.
+Experienced surgical technologists available for PRN staffing needs,
+helping facilities maintain dependable coverage and keep their surgical
+teams running smoothly.
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
-<h3>
-Coverage for Staffing Shortages
-</h3>
-
-<p>
-Reliable coverage for call-outs, vacations, leaves of absence,
-unexpected staffing shortages, and increased surgical volume.
-</p>
-
+<div class="service-number">
+02
 </div>
 
-
-<div class="card">
-
 <h3>
-Specialty-Specific Staffing
+Short-Term Staffing
 </h3>
 
 <p>
-Staffing support tailored to the specialty, procedures, and workflow
-of your surgical facility.
+Flexible short-term staffing solutions designed to support facilities
+during temporary staffing needs and scheduling gaps.
 </p>
 
 </div>
@@ -450,17 +733,21 @@ of your surgical facility.
 
 <!-- SPECIALTIES -->
 
-<section>
+<section id="specialties">
+
+<div class="section-eyebrow">
+Areas of Expertise
+</div>
 
 <h2 class="section-title">
-Specialty Experience
+Specialties
 </h2>
 
-<div class="specialties">
+<div class="specialties-content">
 
 <p>
-Staffing support available for a variety of surgical specialties,
-with a strong focus on ophthalmology.
+Ophthalmology is at the heart of our expertise, with staffing support
+across additional surgical specialties.
 </p>
 
 <div class="specialty-list">
@@ -474,7 +761,7 @@ General Surgery
 </span>
 
 <span class="specialty">
-ENT
+Pain Management
 </span>
 
 <span class="specialty">
@@ -482,7 +769,7 @@ Plastic Surgery
 </span>
 
 <span class="specialty">
-Pain Management
+Outpatient / Ambulatory Surgery
 </span>
 
 </div>
@@ -492,72 +779,41 @@ Pain Management
 </section>
 
 
-<!-- CONTACT -->
+<!-- INQUIRY -->
 
-<section class="cta" id="contact">
+<section class="inquiry-section" id="inquiry">
 
-<h2>
-Need Surgical Staffing?
+<div class="section-eyebrow">
+Staffing Request
+</div>
+
+<h2 class="section-title">
+Let's Talk About Your Staffing Needs
 </h2>
 
-<p>
-Let's discuss how Desert Surgical Staffing can help your facility.
-</p>
+<div class="inquiry-wrap">
 
-<br>
+<div class="inquiry-header">
 
-<button class="button" onclick="openForm()">
+<h3>
 Request Staffing
-</button>
-
-<br><br>
+</h3>
 
 <p>
-Or contact us directly:
+Tell us a little about your facility and staffing needs.
+We'll get back to you to discuss how Desert Surgical Staffing can help.
 </p>
 
-<p>
-<a href="tel:6027105404">
-602-710-5404
-</a>
-</p>
-
-<p>
-<a href="mailto:desertsurgicalstaffing@gmail.com">
-desertsurgicalstaffing@gmail.com
-</a>
-</p>
-
-</section>
+</div>
 
 
-<!-- INQUIRY POPUP -->
-
-<div class="modal" id="inquiryModal">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeForm()">
-&times;
-</span>
-
-<h2>
-Request Staffing
-</h2>
-
-<p class="modal-intro">
-Tell us about your staffing needs and we'll get back to you.
-</p>
-
+<!-- FORMspree -->
 
 <form
-id="staffing-form"
+class="inquiry-form"
 action="YOUR_FORMSPREE_ENDPOINT"
 method="POST"
 >
-
-
-<!-- SUBJECT -->
 
 <input
 type="hidden"
@@ -566,32 +822,32 @@ value="New Desert Surgical Staffing Inquiry"
 >
 
 
-<div class="form-group">
+<div class="inquiry-field">
 
 <label for="facility">
-Facility / Surgery Center Name *
+Facility Name *
 </label>
 
 <input
 type="text"
 id="facility"
 name="facility"
-placeholder="Facility name"
+placeholder="Facility / Surgery Center"
 required
 >
 
 </div>
 
 
-<div class="form-group">
+<div class="inquiry-field">
 
-<label for="name">
+<label for="contact-name">
 Your Name *
 </label>
 
 <input
 type="text"
-id="name"
+id="contact-name"
 name="name"
 placeholder="Your name"
 required
@@ -600,10 +856,10 @@ required
 </div>
 
 
-<div class="form-group">
+<div class="inquiry-field">
 
 <label for="email">
-Email Address *
+Email *
 </label>
 
 <input
@@ -617,23 +873,23 @@ required
 </div>
 
 
-<div class="form-group">
+<div class="inquiry-field">
 
 <label for="phone">
-Phone Number
+Phone
 </label>
 
 <input
 type="tel"
 id="phone"
 name="phone"
-placeholder="(602) 000-0000"
+placeholder="602-000-0000"
 >
 
 </div>
 
 
-<div class="form-group">
+<div class="inquiry-field">
 
 <label for="specialty">
 Specialty Needed *
@@ -646,30 +902,30 @@ required
 >
 
 <option value="">
-Select a specialty
+Select specialty
 </option>
 
-<option>
+<option value="Ophthalmology">
 Ophthalmology
 </option>
 
-<option>
+<option value="General Surgery">
 General Surgery
 </option>
 
-<option>
-ENT
-</option>
-
-<option>
-Plastic Surgery
-</option>
-
-<option>
+<option value="Pain Management">
 Pain Management
 </option>
 
-<option>
+<option value="Plastic Surgery">
+Plastic Surgery
+</option>
+
+<option value="Outpatient / Ambulatory Surgery">
+Outpatient / Ambulatory Surgery
+</option>
+
+<option value="Other">
 Other
 </option>
 
@@ -678,40 +934,40 @@ Other
 </div>
 
 
-<div class="form-group">
+<div class="inquiry-field">
 
-<label for="staffing">
-Type of Staffing Needed *
+<label for="staffing-type">
+Staffing Need *
 </label>
 
 <select
-id="staffing"
+id="staffing-type"
 name="staffing_need"
 required
 >
 
 <option value="">
-Select an option
+Select staffing need
 </option>
 
-<option>
-PRN / Per Diem Coverage
+<option value="PRN Staffing">
+PRN Staffing
 </option>
 
-<option>
-Short-Term Coverage
+<option value="Short-Term Staffing">
+Short-Term Staffing
 </option>
 
-<option>
-Travel / Contract Staffing
+<option value="Temporary Coverage">
+Temporary Coverage
 </option>
 
-<option>
-Ongoing Staffing
+<option value="Staffing Shortage Coverage">
+Staffing Shortage Coverage
 </option>
 
-<option>
-Emergency / Last-Minute Coverage
+<option value="Other">
+Other
 </option>
 
 </select>
@@ -719,7 +975,7 @@ Emergency / Last-Minute Coverage
 </div>
 
 
-<div class="form-group">
+<div class="inquiry-field full-width">
 
 <label for="dates">
 Dates / Schedule Needed
@@ -735,7 +991,7 @@ placeholder="Example: September 10–15, 7am–3pm"
 </div>
 
 
-<div class="form-group">
+<div class="inquiry-field full-width">
 
 <label for="message">
 Tell Us About Your Staffing Need
@@ -744,20 +1000,27 @@ Tell Us About Your Staffing Need
 <textarea
 id="message"
 name="message"
-placeholder="Please include any important details about your staffing request."
+placeholder="Please tell us about the coverage you need, approximate hours, number of staff needed, or any other details."
 ></textarea>
 
 </div>
 
 
-<div class="submit-area">
+<div class="inquiry-submit-wrap">
 
 <button
 type="submit"
-class="button"
+class="inquiry-submit"
 >
 Submit Staffing Request
 </button>
+
+</div>
+
+
+<div class="inquiry-note">
+
+Your information is used only to respond to your staffing inquiry.
 
 </div>
 
@@ -765,87 +1028,77 @@ Submit Staffing Request
 
 </div>
 
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+<div class="section-eyebrow">
+Let's Work Together
 </div>
+
+<h2 class="section-title">
+Need surgical staffing support?
+</h2>
+
+<p>
+Reach out to Desert Surgical Staffing to discuss your facility's
+staffing needs.
+</p>
+
+<div class="contact-details">
+
+<div class="contact-item">
+
+<span class="contact-label">
+Phone
+</span>
+
+<a href="tel:6027105404">
+602-710-5404
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<span class="contact-label">
+Email
+</span>
+
+<a href="mailto:desertsurgicalstaffing@gmail.com">
+desertsurgicalstaffing@gmail.com
+</a>
+
+</div>
+
+</div>
+
+</section>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-<p>
-<strong>
+<p class="footer-name">
 Desert Surgical Staffing
-</strong>
 </p>
 
 <p>
-Professional Surgical Staffing Solutions
+© 2026 Desert Surgical Staffing. All rights reserved.
 </p>
 
 <p>
-<a href="tel:6027105404">
-602-710-5404
-</a>
-|
-<a href="mailto:desertsurgicalstaffing@gmail.com">
-desertsurgicalstaffing@gmail.com
-</a>
-</p>
-
-<p style="margin-top:15px;">
-© 2026 Desert Surgical Staffing. All Rights Reserved.
+Reliable. Skilled. Here when it matters.
 </p>
 
 </footer>
 
 
-<!-- JAVASCRIPT -->
-
-<script>
-
-function openForm() {
-
-document.getElementById("inquiryModal").style.display = "block";
-
-document.body.style.overflow = "hidden";
-
-}
-
-
-function closeForm() {
-
-document.getElementById("inquiryModal").style.display = "none";
-
-document.body.style.overflow = "auto";
-
-}
-
-
-window.onclick = function(event) {
-
-const modal =
-document.getElementById("inquiryModal");
-
-if (event.target === modal) {
-
-closeForm();
-
-}
-
-}
-
-
-document.addEventListener("keydown", function(event) {
-
-if (event.key === "Escape") {
-
-closeForm();
-
-}
-
-});
-
-</script>
-
 </body>
 </html>
+```
